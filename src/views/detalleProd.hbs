@@ -1,0 +1,18 @@
+{{#if productos}}
+    {{#each productos}}
+        <div class="detail-outside flex-box-detail">
+            <div class="detail-row">
+                <img src={{this.imagen}} class="bordesRedondeados"/>
+                <section class="section">
+                    <h1>{{this.nombre}}</h1>
+                    <p>{{this.descripcion}}</p>
+                    <h2>${{this.precio}}</h2>
+                </section>
+            </div>
+        </div>
+    {{/each}}
+{{else}}
+    <div colspan="4" class="text-center p-20">
+      <p class="mb-8">Nope, no existe este producto para mostrar</p>
+    </div>
+{{/if}}

@@ -1,0 +1,8 @@
+<h1>PERFIL DE {{nombre}}</h1>
+
+<div>Subir una foto de perfil</div>
+    <!--  SINGLE FILE -->
+<form action="/api/perfil" enctype="multipart/form-data" method="POST">
+    <input type="file" name="miArchivo" />
+    <input type="submit" value="Subir Archivo" />
+</form>

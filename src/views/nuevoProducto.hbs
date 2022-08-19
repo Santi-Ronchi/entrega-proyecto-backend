@@ -1,0 +1,25 @@
+<h2>Ingrese Producto</h2>
+<form action="/api/home/carga" method="POST">
+    <!-- titulo -->
+    <div>
+        <label>Nombre</label>
+        <input type="text" name="name" required>
+    </div>
+    <!-- precio -->
+    <div class="form-group">
+        <label>Precio</label>
+        <input type="number" step="0.01" name="price" required>
+    </div>
+    <!-- url -->
+    <div class="form-group">
+        <label>Foto URL</label>
+        <input type="url" name="url" required>
+    </div>
+    <!-- descripcion -->
+    <div class="form-group">
+        <label>Descripcion</label>
+        <input type="text" name="description" required>
+    </div>
+    <!-- Botón de envío -->
+    <button>Enviar</button>
+</form>

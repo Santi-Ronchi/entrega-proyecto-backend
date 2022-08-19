@@ -1,0 +1,43 @@
+<div class="container mx-auto mt-5">
+  <div class="py-8 m-5">
+    <div class="d-flex justify-content-between m-5">
+      <h2 class="font-semibold leading-tight">carrito</h2>
+      <a href="/api/home" class="btn btn-primary btn-md mx-4 w-25">Productos</a>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#if productos}}
+          {{#each productos}}
+          <tr>
+            <td>{{this.nombre}}</td>
+            <td>${{this.precio}}.-</td>
+            <td>{{this.descripcion}}</td>
+            <td><img src={{this.foto}} alt={{this.nombre}} height="100" width="100"></td>
+            <td><button class="botonEliminar" value={{this.id}}>-</button></td>
+          </tr>
+          {{/each}}
+        {{else}}
+          <tr>
+            <td colspan="4" class="text-center p-20">
+              <p class="mb-8">No hay productossssss para mostrar</p>
+            </td>
+          </tr>
+        {{/if}}
+      </tbody>
+    </table>
+  </div>
+  <div class="">
+    <form action="/api/carrito" method="post">
+      <button class="btn btn-primary btn-md mx-4 w-25">Terminar Compra</button>
+    </form>
+  </div>
+</div>

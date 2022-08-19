@@ -1,0 +1,13 @@
+<div class="container mt-3">
+    <div class="row justify-content-between alert alert-success">
+        <div class="">
+            <a><img src="../imagen/{{foto}}" class="rounded-circle" height="75" width="75"></a>
+        </div>
+        <div class="">
+            <h1 class="col-18">Carrito de: {{nombre}}</h1>
+        </div>
+        <div class="">
+        <button id="idCart" type="button" {{#if idCart}} value={{idCart}} {{/if}}class="btn btn-success" onclick="location.href='/api/home'">Home</button>
+        </div>
+    </div>
+</div>

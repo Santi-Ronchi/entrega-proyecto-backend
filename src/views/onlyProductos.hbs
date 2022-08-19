@@ -1,0 +1,37 @@
+<div class="container mx-auto mt-5">
+  <div class="py-8 m-5">
+    <div class="d-flex justify-content-between m-5">
+      <h2 class="font-semibold leading-tight">ONLY Productos FOR TESTING</h2>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Comprar</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#if productos}}
+          {{#each productos}}
+          <tr>
+            <td>{{this.nombre}}</td>
+            <td>${{this.precio}}.-</td>
+            <td>{{this.descripcion}}</td>
+            <td><img src={{this.foto}} alt={{this.nombre}} height="100" width="100"></td>
+            <td><button class="botonCompra" value={{this.id}}>+</button></td>
+          </tr>
+          {{/each}}
+        {{else}}
+          <tr>
+            <td colspan="4" class="text-center p-20">
+              <p class="mb-8">No hay productos paraaaaaaaaaa mostrar</p>
+            </td>
+          </tr>
+        {{/if}}
+      </tbody>
+    </table>
+  </div>
+</div>
