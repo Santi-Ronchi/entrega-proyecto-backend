@@ -1,4 +1,3 @@
-const args = require('./src/funciones/funcMinimist')
 require('dotenv').config()
 
 module.exports = {
